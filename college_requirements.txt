@@ -1,0 +1,23 @@
+Subject:
+Creati un website personal utilizand HTML, CSS si Javascript, pe tema "Website personal / Despre mine, eu, familie, prieteni, Orasul/scoala din care vin / Hobby-urile mele / CV / Contact". 
+
+- 3 pagini HTML
+- contact page
+- hobby
+
+Actual plan:
+
+- Main page: welcome page
+
+- Hobby page
+
+- Contact page
+
+- About me page
+
+On the welcome pagee will have:
+
+3 main cards:
+first one hobbies page
+second one an about me page
+third one a contact me page
