@@ -29,12 +29,6 @@ body
 }
 
 /* Actual stuff */
-#main_body
-{
-    opacity: 0;
-    transition: opacity ease-in 1s;
-}
-
 #page_title
 {
     position: absolute;
