@@ -1,0 +1,2 @@
+General:
+- when window is small, title text on about page goes off-center

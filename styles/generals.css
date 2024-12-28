@@ -28,6 +28,11 @@
     cursor: grab;
 }
 
+*::selection
+{
+    background-color: var(--selection);
+}
+
 body
 {
     width: 100vw;

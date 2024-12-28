@@ -8,11 +8,6 @@
     font-size: 5rem;
 }
 
-#page_title::selection
-{
-    background-color: var(--selection);
-}
-
 #deck
 {
     width: 100vw;
@@ -75,11 +70,6 @@
     font-family: "Abril Fatface", sans-serif;
     margin-top: .5rem;
     font-size: 2.2rem;
-}
-
-.card_text::selection
-{
-    background-color: var(--selection);
 }
 
 .card img

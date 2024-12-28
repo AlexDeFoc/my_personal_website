@@ -1,18 +1,54 @@
-#page_title
-{
-    position: absolute;
-    top: 25%;
-    left: 10%;
+/* Font imports */
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
+@import url(https://fonts.bunny.net/css?family=abyssinica-sil:400);
 
-    color: white;
-    font-family: "Angkor", sans-serif;
-    text-shadow: var(--main) 5px -10px 1px;
-    font-size: 3rem;
+/* Initializing variables */
+:root
+{
+    font-size: 16px; /* set base font size for rem */
+    --dark_gray: #131515;
+    --dark_white: #F5ECE4;
+    --light_red: #E5383B;
+    --intense_red: #BA191B;
+    --light_orange: #FC6A0A;
+    --intense_orange: #E74504;
 }
 
-#page_title::selection
+*
 {
-    background-color: var(--selection);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: grab;
+}
+
+*::selection
+{
+    background-color: var(--intense_orange);
+}
+
+body
+{
+    display: flex; /* allow the list to be pushed to the bottom of the page */
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    background: var(--dark_gray);
+
+    overflow-x: hidden;
+}
+
+#hobbies_list
+{
+    max-width: 80%; /* sweet spot for centering horizontally the list */
+    height: auto;
+
+    margin-top: auto; /* push the list to the bottom of the page */
 }
 
 #hobbies_list
@@ -20,68 +56,98 @@
     width: 100%;
     height: auto;
 
-    position: absolute;
-    top: 40%;
+    margin-top: auto; /* push the list to the bottom of the page */
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+#hobbies_list_title
+{
+    font-family: "Abril FatFace", sans-serif;
+    font-size: 2.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--dark_white);
+    text-shadow: var(--light_red) -3px 1px 1px;
+
+    text-align: left;
+
+    margin-bottom: 2rem;
 }
 
 .hobby
 {
-    width: 70%;
-    height: auto;
-    padding: 2rem;
-
-    background: var(--ternary);
-    
-    margin-bottom: 5rem;
-    border-radius: 0 30px 30px 0;
-
     position: relative;
+    width: 80%;
+    max-height: 100%;
+    height: auto;
+
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+
+.hobby:last-child
+{
+    margin-bottom: 0;
 }
 
 .hobby::before
 {
     content: "";
-    width: 30%;
-    height: 100%;
+
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
 
-    border-radius: 0 30px 30px 0;
-    background-color: var(--dark_ternary);
-    opacity: .4;
-    filter: blur(50px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-color: var(--light_red);
+    filter: brightness(80%);
+    border-radius: 1rem;
+}
+
+.hobby::after
+{
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1rem;
+
+    background-color: var(--intense_red);
+    filter: brightness(80%);
 }
 
 .hobby_title
 {
-    color: white;
-    font-family: "Abril FatFace", sans-serif;
-    font-size: 3rem;
-    margin: 1rem 0 2rem 2rem;
+    font-family: "Abyssinica Sil", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--dark_white);
+
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: var(--dark_gray);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+
+    margin-left: 1rem;
 }
 
 .hobby_body
 {
-    color: white;
-    font-family: 'Abyssinica SIL', serif;
-    font-size: 1.75rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
+    font-family: "Abyssinica Sil", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--dark_white);
     text-indent: 1rem;
-}
+    letter-spacing: 1px;
 
-.hobby_title::selection, .hobby_body::selection
-{
-    background-color: var(--dark_selection);
-}
-
-#hobbies_list::last-child
-{
-    margin-bottom: 5rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    padding-bottom: 1.5rem;
 }
