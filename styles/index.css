@@ -1,34 +1,3 @@
-/* Font imports */
-@import url(https://fonts.bunny.net/css?family=angkor:400);
-@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
-
-/* Initializing variables */
-:root
-{
-    --main: hsla(355, 100%, 10%, 1);
-    --dark: hsla(220, 100%, 1.5%, 1);
-    --bright_main: hsla(350, 100%, 15%, 1);
-    --accent: red;
-    --selection: hsla(350, 100%, 10%, 0.4);
-}
-
-/* Global Reset & Settings */
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    cursor: grab;
-}
-
-body
-{
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--dark);
-}
-
-/* Actual stuff */
 #page_title
 {
     position: absolute;
@@ -79,7 +48,7 @@ body
     transform: translateY(-10%);
 }
 
-.card::after
+.card::before
 {
     width: 100%;
     height: 100%;
@@ -95,7 +64,7 @@ body
     transition: transform ease-in-out .1s;
 }
 
-.card:hover::after
+.card:hover::before
 {
     transform: scale(120%, 120%) translateY(25%);
 }

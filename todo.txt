@@ -1,0 +1,1 @@
+-- change arrow (in index) selection (CTRL+A) bg clr to none

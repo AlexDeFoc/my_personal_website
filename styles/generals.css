@@ -1,0 +1,37 @@
+/* Font imports */
+@import url(https://fonts.bunny.net/css?family=angkor:400);
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
+@import url(https://fonts.bunny.net/css?family=abyssinica-sil:400);
+
+/* Initializing variables */
+:root
+{
+    font-size: 16px; /* set base font size for rem */
+
+    --main: hsla(355, 100%, 10%, 1);
+    --secondary: hsla(5, 100%, 4%, 1);
+    --ternary: hsla(248, 100%, 5%, 1);
+    --dark_ternary: hsla(248, 100%, 3%, 1);
+    --dark: hsla(220, 100%, 1.5%, 1);
+    --bright_main: hsla(350, 100%, 15%, 1);
+    --accent: red;
+    --selection: hsla(350, 100%, 10%, 0.4);
+    --dark_selection: hsla(220, 100%, 15%, 0.5);
+}
+
+/* Global Reset & Settings */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: grab;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+    position: relative;
+}
