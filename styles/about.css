@@ -1,153 +1,119 @@
-/* Font imports */
-@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
-@import url(https://fonts.bunny.net/css?family=abyssinica-sil:400);
+/* Fonts imports */
+@import url(https://fonts.bunny.net/css?family=amaranth:700);
+@import url(https://fonts.bunny.net/css?family=averia-sans-libre:700);
+@import url(https://fonts.bunny.net/css?family=asap:500);
 
-/* Initializing variables */
-:root
-{
-    font-size: 16px; /* set base font size for rem */
-    --dark_gray: #131515;
-    --dark_white: #F5ECE4;
-    --light_red: #E5383B;
+/* Global sets */
+:root {
+    font-size: 16px;
     --intense_red: #BA191B;
-    --light_orange: #FC6A0A;
-    --intense_orange: #E74504;
+    --light_red: #E5383B;
+    --black: #161A1D;
+    --white: #F5ECE4;
 }
 
-*
-{
-    padding: 0;
+/* Global resets */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    cursor: grab;
+    text-decoration: none;
 }
 
-*::selection
-{
-    background-color: var(--intense_orange);
+/* Actual styling now */
+body {
+    background-color: var(--black);
 }
 
-body
-{
-    display: flex; /* allow the list to be pushed to the bottom of the page */
-    justify-content: flex-end;
-    align-items: center;
+#wrapper {
+    position: relative;
 
     width: 100vw;
     height: 100vh;
 
-    position: relative;
-
-    background: var(--dark_gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     overflow-x: hidden;
 }
 
-#hobbies_list
-{
-    max-width: 80%; /* sweet spot for centering horizontally the list */
-    height: auto;
-
-    margin-top: auto; /* push the list to the bottom of the page */
+/* Boxes styling */
+#hero {
+    margin-top: 5rem;
 }
 
-#hobbies_list
-{
-    width: 100%;
-    height: auto;
-
-    margin-top: auto; /* push the list to the bottom of the page */
+#hobbies {
+    margin-top: 3rem;
 }
 
-#hobbies_list_title
-{
-    font-family: "Abril FatFace", sans-serif;
-    font-size: 2.75rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: var(--dark_white);
-    text-shadow: var(--light_red) -3px 1px 1px;
-
-    text-align: left;
-
-    margin-bottom: 2rem;
-}
-
-.hobby
-{
+.collection {
     position: relative;
-    width: 80%;
-    max-height: 100%;
+
+    max-width: 80%;
     height: auto;
+}
+
+.hobby {
+    position: relative;
 
     margin-bottom: 5rem;
-    padding: 1rem;
+
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+
+    background-color: var(--light_red);
 }
 
-.hobby:last-child
-{
-    margin-bottom: 0;
-}
-
-.hobby::before
-{
+.hobby::before {
     content: "";
 
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 
     width: 100%;
     height: 100%;
-    z-index: -1;
 
-    background-color: var(--light_red);
-    filter: brightness(80%);
     border-radius: 1rem;
-}
-
-.hobby::after
-{
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 1rem;
 
     background-color: var(--intense_red);
-    filter: brightness(80%);
+
+    transform: scaleX(105%) scaleY(120%);
 }
 
-.hobby_title
-{
-    font-family: "Abyssinica Sil", sans-serif;
+/* Individual, text styling */
+#title {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+
+    color: var(--white);
+
+    text-shadow: var(--intense_red) 0px -5px 2px;
+}
+
+.hobby_title {
+    font-family: 'Averia Sans Libre', sans-serif;
+    font-weight: 700;
     font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: var(--dark_white);
 
-    text-decoration-style: wavy;
-    text-decoration-line: underline;
-    text-decoration-color: var(--dark_gray);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
+    color: var(--white);
 
-    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
-.hobby_body
-{
-    font-family: "Abyssinica Sil", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--dark_white);
-    text-indent: 1rem;
-    letter-spacing: 1px;
 
-    margin-top: .5rem;
-    margin-left: 1rem;
-    padding-bottom: 1.5rem;
+.hobby_description_line {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    color: var(--white);
+
+    margin-bottom: 1rem;
+
+    overflow-wrap: break-word;
 }
