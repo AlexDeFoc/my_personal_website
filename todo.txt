@@ -1,2 +1,1 @@
-- clean up/redo index.css
 - add a bit more js to make pages more interactive (more points at school)
