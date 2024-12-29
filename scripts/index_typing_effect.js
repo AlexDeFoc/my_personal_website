@@ -11,8 +11,8 @@ function addChar() {
 }
 
 function startTypingPageHeader() {
-    // reset inner contents
-    text_element.innerHTML = "";
+    // reset inner contents (add 2 dots to make it so the buttons dont fly down, cuz the contents would be empty)
+    text_element.innerHTML = "..";
 
     // every x ms add call the function
     setInterval(addChar, 170)
