@@ -1,1 +1,1 @@
--- make the about page colors a bit darker, the bg to blue, and the reds a bit darker
+- clean up/redo index.css

@@ -1,2 +1,0 @@
-General:
-* on about page: when width of window is small the items margin is smaller and smaller (fix importance: low)

@@ -13,6 +13,7 @@
     --light_red: hsla(350, 100%, 15%, 1);
     --intense_red: red;
     --dark_blue: hsla(220, 100%, 1.5%, 1);
+    --light_blue: hsla(220, 100%, 15%, 1);
     --selection: hsla(220, 100%, 5%, 1);
 }
 
@@ -40,100 +41,102 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    
+
+    display: flex;
+    flex-direction: column;
+}
+
+#hero {
+    margin-top: 5rem;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-#hero {
-    margin-top: 15rem;
+.project_container {
+    margin-top: 3rem;
 }
 
-#contact_container {
-    margin-top: 2rem;
-}
-
-.container {
+.group {
     position: relative;
-    width: 80%;
-    height: auto;
-}
-
-.contact_box {
-    position: relative;
-    width: 50%;
-    height: auto;
-
-    background-color: var(--dark_red);
-
-    margin-bottom: 5rem;
-    padding: 1rem;
-
-    border-radius: .4rem;
-}
-
-.contact_details {
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-
     width: 100%;
     height: auto;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project {
+    position: relative;
+    width: 60%;
+    height: auto;
+    
+    margin-bottom: 3rem;
+    padding: 1rem;
+
+    background-color: var(--light_red);
+    border-radius: 1rem;
 }
 
 /* Text */
-#title {
+#page_header {
     font-family: 'Amaranth', sans-serif;
     font-weight: 700;
     font-size: 3rem;
     color: var(--white);
-
-    text-shadow: var(--intense_red) -4px 0px 2px;
+    
+    text-shadow: var(--intense_red) 0px 4px 2px;
     overflow-wrap: break-word;
 }
 
-.contact_title {
-    font-family: 'Averia Sans Libre', sans-serif;
+.title {
+    font-family: 'Amaranth', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     color: var(--white);
 
     overflow-wrap: break-word;
+    margin-bottom: 2rem;
+
+    background-color: var(--light_blue);
+    border-radius: 1rem;
+    padding: .8rem;
 }
 
-.contact_detail_title {
-    font-family: 'Asap', sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
+.project_title {
+    font-family: 'Averia Sans Libre', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
     color: var(--white);
-    flex-basis: 40%;
-
+    
+    margin-bottom: 1rem;
     overflow-wrap: break-word;
 }
 
-.contact_detail_value {
+.project_description {
     font-family: 'Asap', sans-serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--white);
-    flex-basis: 60%;
 
-    background-color: var(--light_red);
-    padding: .5rem;
-    border-radius: 1rem 0 0 1rem;
-
-    overflow-wrap: anywhere;
+    margin-bottom: 1rem;
+    overflow-wrap: break-word;
 }
 
-.contact_link {
+.project_link {
     font-family: 'Asap', sans-serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--dark_white);
+
+    overflow-wrap: break-word;
 }
