@@ -30,6 +30,7 @@
 /* Actual styling now */
 body {
     background-color: var(--dark_blue);
+    transition: opacity ease-in .5s;
 }
 
 /* Boxes */
