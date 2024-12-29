@@ -1,90 +1,152 @@
-#page_title
-{
-    position: absolute;
-    top: 15%;
-    color: white;
-    font-family: "Angkor", sans-serif;
-    text-shadow: var(--accent) 0px 5px 1px;
-    font-size: 5rem;
+/* Fonts imports */
+@import url(https://fonts.bunny.net/css?family=amaranth:700);
+@import url(https://fonts.bunny.net/css?family=asap:500);
+
+/* Global sets */
+:root {
+    font-size: 16px;
+    --white: #F5ECE4;
+    --dark_red: hsla(355, 100%, 10%, 1);
+    --light_red: hsla(350, 100%, 15%, 1);
+    --intense_red: red;
+    --dark_intense_red: #930000;
+    --dark_blue: hsla(220, 100%, 1.5%, 1);
+    --selection: hsla(220, 100%, 5%, 1);
 }
 
-#deck
-{
+*::selection {
+    background-color: var(--selection);
+}
+
+/* Global resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: grab;
+}
+
+/* Actual styling now */
+body {
+    background-color: var(--dark_blue);
+}
+
+/* Boxes */
+#wrapper {
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: var(--dark);
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.card
-{
+#deck {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: auto;
+}
+
+.card {
+    position: relative;
     min-width: 300px;
     height: 300px;
-    margin: 0 3rem 0 3rem;
+    background-color: var(--dark_intense_red);
 
-    background-color: var(--main);
+    border-radius: 1rem 1rem 1rem 1rem;
 
-    border-radius: 5%;
-
-    position: relative;
-
-    transition: margin ease-in-out .1s, transform ease-in-out .3s;
-
-    text-align: center;
+    transition: transform ease-in-out 300ms;
 }
 
-.card:hover
-{
-    margin: 0 6rem 0 6rem;
-    background-color: var(--bright_main);
-    transform: translateY(-10%);
-}
-
-.card::before
-{
-    width: 100%;
-    height: 100%;
-    background-color: var(--main);
-    border-radius: 5%;
-
+.card::before {
     content: "";
 
     position: absolute;
     top: 0;
     left: 0;
 
-    transition: transform ease-in-out .1s;
-}
+    width: 100%;
+    height: 100%;
 
-.card:hover::before
-{
-    transform: scale(120%, 120%) translateY(25%);
-}
-
-.card_text
-{
-    color: white;
-    font-family: "Abril Fatface", sans-serif;
-    margin-top: .5rem;
-    font-size: 2.2rem;
-}
-
-.card img
-{
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
     z-index: 1;
-    filter: invert(100%);
-    transition: transform ease-in-out .2s;
+
+    border-radius: 1rem 1rem 1rem 1rem;
+
+    background-color: var(--dark_red);
+
+    transition: transform ease-in-out 150ms;
+
+    transform: scale(101%, 101%);
 }
 
-.card:hover img
-{
-    transform: translateY(60%) rotateX(180deg);
+.card::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../photos/down_arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+
+    transition: transform ease-in-out 150ms;
+
+    transform: scale(75%);
+}
+
+.card:hover {
+    transform: translateY(-10%);
+}
+
+.card:hover::before {
+    transform: translateY(30%) scale(120%, 120%);
+}
+
+.card:hover::after {
+    transform: translateY(30%) scaleY(-1) scale(75%);
+}
+
+/* Text */
+#page_header {
+    font-family: "Amaranth", sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--white);
+
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+
+    text-align: center;
+    text-shadow: var(--intense_red) 0px 5px 2px;
+
+    overflow-wrap: break-word;
+}
+
+.card_text {
+    font-family: "Asap", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--white);
+
+    margin-top: .5rem;
+
+    text-align: center;
+    overflow-wrap: break-word;
 }

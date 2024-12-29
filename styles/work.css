@@ -9,7 +9,6 @@
 
     --white: #F5ECE4;
     --dark_white: hsl(0, 0%, 40%, 1);
-    --dark_red: hsla(355, 100%, 10%, 1);
     --light_red: hsla(350, 100%, 15%, 1);
     --intense_red: red;
     --dark_blue: hsla(220, 100%, 1.5%, 1);
@@ -91,7 +90,7 @@ body {
 #page_header {
     font-family: 'Amaranth', sans-serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--white);
     
     text-shadow: var(--intense_red) 0px 4px 2px;
