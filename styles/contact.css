@@ -6,7 +6,9 @@
 /* Global sets */
 :root {
     font-size: 16px;
+
     --white: #F5ECE4;
+    --dark_white: hsl(0, 0%, 40%, 1);
     --dark_red: hsla(355, 100%, 10%, 1);
     --light_red: hsla(350, 100%, 15%, 1);
     --intense_red: red;
@@ -14,8 +16,9 @@
     --selection: hsla(220, 100%, 5%, 1);
 }
 
-*::selection {
-    background-color: var(--selection);
+body {
+    background-color: var(--dark_blue);
+    overflow-x: hidden;
 }
 
 /* Global resets */
@@ -24,101 +27,109 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    cursor: grab;
 }
 
 /* Actual styling now */
-body {
-    background-color: var(--dark_blue);
-}
-
+/* Boxes */
 #wrapper {
     position: relative;
-
     width: 100vw;
     height: 100vh;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
-    overflow-x: hidden;
 }
 
-/* Boxes styling */
 #hero {
-    margin-top: 5rem;
+    margin-top: 15rem;
 }
 
-#hobbies {
-    margin-top: 3rem;
+#contact_container {
+    margin-top: 2rem;
 }
 
-.collection {
+.container {
     position: relative;
-
     width: 80%;
     height: auto;
 }
 
-.hobby {
+.contact_box {
     position: relative;
-
-    margin-bottom: 5rem;
-
-    padding: .5rem 1rem;
-    border-radius: 1rem;
-
-    background-color: var(--light_red);
-}
-
-.hobby::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: 1rem;
+    width: 50%;
+    height: auto;
 
     background-color: var(--dark_red);
 
-    transform: scaleX(105%) scaleY(120%);
+    margin-bottom: 5rem;
+    padding: 1rem;
+
+    border-radius: .4rem;
 }
 
-/* Individual, text styling */
+.contact_details {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+/* Text */
 #title {
     font-family: 'Amaranth', sans-serif;
     font-weight: 700;
     font-size: 3rem;
-
     color: var(--white);
 
-    text-shadow: var(--intense_red) 0px -5px 2px;
+    text-shadow: var(--intense_red) -4px 0px 2px;
+    overflow-wrap: break-word;
 }
 
-.hobby_title {
+.contact_title {
     font-family: 'Averia Sans Libre', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-
     color: var(--white);
-
-    margin-bottom: 1rem;
-}
-
-.hobby_description_line {
-    font-family: 'Asap', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-
-    color: var(--white);
-
-    margin-bottom: 1rem;
 
     overflow-wrap: break-word;
+}
+
+.contact_detail_title {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--white);
+    flex-basis: 40%;
+
+    overflow-wrap: break-word;
+}
+
+.contact_detail_value {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--white);
+    flex-basis: 60%;
+
+    background-color: var(--light_red);
+    padding: .5rem;
+    border-radius: 1rem 0 0 1rem;
+
+    overflow-wrap: anywhere;
+}
+
+.contact_link {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--dark_white);
 }
